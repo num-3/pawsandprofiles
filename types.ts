@@ -2,9 +2,7 @@
 export interface Person {
   id: string;
   name: string;
-  role: string;
   headshot: string;
-  phone: string;
   instagram: string;
   linkedin: string;
   email: string;
