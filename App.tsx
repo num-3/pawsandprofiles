@@ -26,8 +26,10 @@ const App: React.FC = () => {
 
       <div className="min-h-screen flex flex-col items-center px-6 py-10 max-w-md mx-auto relative">
         <header className="flex flex-col items-center mb-12 text-center">
-          <div className="drop-shadow-md">
-            {DOG_LOGO_SVG}
+          <div className="drop-shadow-md transition-transform hover:scale-110 duration-300">
+            <a href="https://www.instagram.com/enzo31.3/" target="_blank" rel="noopener noreferrer">
+              {DOG_LOGO_SVG}
+            </a>
           </div>
           <p className="text-[#4F2C1D]/60 font-bold text-base mt-2 bg-white/80 backdrop-blur-sm px-4 py-1 rounded-full border-2 border-[#4F2C1D]/5">
             Say hi to my favorite humans! 🐾
