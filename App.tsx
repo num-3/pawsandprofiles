@@ -19,52 +19,54 @@ const App: React.FC = () => {
   const selectedPerson = selectedPersonIndex !== null ? PEOPLE[selectedPersonIndex] : null;
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-10 max-w-md mx-auto relative overflow-hidden bg-gradient-to-b from-[#FFFDF9] to-[#FEF3C7]">
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#FFFDF9] to-[#FEF3C7] relative overflow-hidden">
       {/* Warm background accent blobs */}
       <div className="absolute top-[-5%] left-[-15%] w-64 h-64 bg-yellow-100/40 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-[15%] right-[-20%] w-80 h-80 bg-orange-50/20 rounded-full blur-3xl -z-10"></div>
-      
-      <header className="flex flex-col items-center mb-12 text-center">
-        <div className="drop-shadow-md">
-          {DOG_LOGO_SVG}
-        </div>
-        <h1 className="mt-8 text-4xl font-extrabold text-[#4F2C1D] tracking-tight">
-          Paws & Profiles
-        </h1>
-        <p className="text-[#4F2C1D]/60 font-bold text-base mt-2 bg-white/80 backdrop-blur-sm px-4 py-1 rounded-full border-2 border-[#4F2C1D]/5">
-          Say hi to my favorite humans! 🐾
-        </p>
-      </header>
 
-      <main className="w-full space-y-6">
-        {PEOPLE.map((person, index) => (
-          <div 
-            key={person.id} 
-            className="animate-in slide-in-from-bottom-8 duration-500 fill-mode-both"
-            style={{ animationDelay: `${index * 150}ms` }}
-          >
-            <PersonCard 
-              person={person} 
-              index={index}
-              onClick={() => handleOpenModal(index)} 
-            />
+      <div className="min-h-screen flex flex-col items-center px-6 py-10 max-w-md mx-auto relative">
+        <header className="flex flex-col items-center mb-12 text-center">
+          <div className="drop-shadow-md">
+            {DOG_LOGO_SVG}
           </div>
-        ))}
-      </main>
+          <h1 className="mt-8 text-4xl font-extrabold text-[#4F2C1D] tracking-tight">
+            Paws & Profiles
+          </h1>
+          <p className="text-[#4F2C1D]/60 font-bold text-base mt-2 bg-white/80 backdrop-blur-sm px-4 py-1 rounded-full border-2 border-[#4F2C1D]/5">
+            Say hi to my favorite humans! 🐾
+          </p>
+        </header>
 
-      <footer className="mt-auto pt-16 pb-4">
-        <div className="flex items-center gap-2 text-[#4F2C1D]/30 font-bold text-[10px] uppercase tracking-[0.2em]">
-          <span>Made with ❤️ & Puppy Power</span>
-          <span className="text-xl">🐶</span>
-        </div>
-      </footer>
+        <main className="w-full space-y-6">
+          {PEOPLE.map((person, index) => (
+            <div
+              key={person.id}
+              className="animate-in slide-in-from-bottom-8 duration-500 fill-mode-both"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <PersonCard
+                person={person}
+                index={index}
+                onClick={() => handleOpenModal(index)}
+              />
+            </div>
+          ))}
+        </main>
+
+        <footer className="mt-auto pt-16 pb-4">
+          <div className="flex items-center gap-2 text-[#4F2C1D]/30 font-bold text-[10px] uppercase tracking-[0.2em]">
+            <span>Made with ❤️ & Puppy Power</span>
+            <span className="text-xl">🐶</span>
+          </div>
+        </footer>
+      </div>
 
       {/* Conditional Modal */}
       {selectedPersonIndex !== null && selectedPerson && (
-        <ContactModal 
-          person={selectedPerson} 
+        <ContactModal
+          person={selectedPerson}
           index={selectedPersonIndex}
-          onClose={handleCloseModal} 
+          onClose={handleCloseModal}
         />
       )}
     </div>
