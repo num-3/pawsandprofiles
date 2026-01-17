@@ -29,6 +29,6 @@ export const DOG_LOGO_SVG = (
   <img
     src="/headshots/Enzo-Sticker.png"
     alt="Dog Logo"
-    className="w-24 h-24 drop-shadow-lg"
+    className="w-32 h-32 drop-shadow-lg"
   />
 );
