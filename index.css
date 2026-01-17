@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: #FFFDF9; /* Brighter, warm off-white */
+  -webkit-tap-highlight-color: transparent;
+}
+.custom-shadow {
+  box-shadow: 0 8px 0px 0px rgba(79, 44, 29, 0.15);
+}
+/* Mobile tactile feedback */
+.active-press:active {
+  transform: translateY(4px) scale(0.98);
+  box-shadow: 0 2px 0px 0px rgba(79, 44, 29, 0.15);
+}
