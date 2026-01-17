@@ -29,9 +29,6 @@ const App: React.FC = () => {
           <div className="drop-shadow-md">
             {DOG_LOGO_SVG}
           </div>
-          <h1 className="mt-8 text-4xl font-extrabold text-[#4F2C1D] tracking-tight">
-            Paws & Profiles
-          </h1>
           <p className="text-[#4F2C1D]/60 font-bold text-base mt-2 bg-white/80 backdrop-blur-sm px-4 py-1 rounded-full border-2 border-[#4F2C1D]/5">
             Say hi to my favorite humans! 🐾
           </p>
@@ -55,8 +52,7 @@ const App: React.FC = () => {
 
         <footer className="mt-auto pt-16 pb-4">
           <div className="flex items-center gap-2 text-[#4F2C1D]/30 font-bold text-[10px] uppercase tracking-[0.2em]">
-            <span>Made with ❤️ & Puppy Power</span>
-            <span className="text-xl">🐶</span>
+            <span>Made with ❤️ & Puppy Power 🐶</span>
           </div>
         </footer>
       </div>
